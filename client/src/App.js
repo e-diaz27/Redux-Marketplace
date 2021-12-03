@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,8 +8,10 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-// import Provider from react-redux, replacing GlobalState's StoreProvider
+// import provider from redux and store from utils
+//Replace StoreProvider from ContextAPI
 import { Provider } from 'react-redux';
+import store from './utils/store';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
@@ -17,11 +19,8 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
-
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
-
-import store from './utils/store'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -47,9 +46,9 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-        <Provider store={store}>
+          <Provider store={store}>
             <Nav />
-            <Routes>
+            <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
@@ -57,8 +56,8 @@ function App() {
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
-            </Routes>
-        </Provider>
+            </Switch>
+          </Provider>
         </div>
       </Router>
     </ApolloProvider>

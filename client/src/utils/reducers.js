@@ -1,5 +1,3 @@
-//do not need useReducer with Redux
-
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -12,17 +10,8 @@ import {
   TOGGLE_CART
 } from "./actions";
 
-//moved initial state to reducers.js
-const initialState = {
-  products: [],
-  categories: [],
-  currentCategory: '',
-  cart: [],
-  cartOpen: false
-};
 
-// set state to initialState
-export const reducers = (state = initialState, action) => {
+export const reducers = (state, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -96,5 +85,4 @@ export const reducers = (state = initialState, action) => {
   }
 };
 
-//cleaner exports
 export default reducers;

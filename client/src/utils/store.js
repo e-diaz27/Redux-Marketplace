@@ -1,6 +1,15 @@
 import { createStore } from 'redux';
 import reducers from './reducers';
 
-// undid preloaded state to attempt render
+// create store.js to centralize global state and actions via reducer
+//preload initial state as second argument of store
 
-export default createStore(reducers);
+const initialState = {
+    products: [],
+    categories: [],
+    currentCategory: '',
+    cart: [],
+    cartOpen: false
+  };
+
+export default createStore(reducers, initialState);
