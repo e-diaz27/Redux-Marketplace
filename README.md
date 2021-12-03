@@ -25,7 +25,7 @@ npm run develop
 ## Usage
 Click the link! [Try it yourself!](https://sheltered-hamlet-84127.herokuapp.com/) 
 
-![Tutorial video](https://github.com/e-diaz27/ReduxHomework/blob/main/WORKS!.mp4)
+[![Tutorial video]](https://github.com/e-diaz27/ReduxHomework/blob/main/WORKS!.mp4)
 
 
 ## License
