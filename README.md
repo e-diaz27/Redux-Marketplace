@@ -15,13 +15,18 @@ A fully functional e-commerce app mockup. Uses a MERN stack to uphold full stack
 
 ## Installation
 
+To run locally input the following commands
+
 ```
-Heroku deploy or run locally
+npm run seed
+npm run develop
 ```
 
 ## Usage
+Click the link! [Try it yourself!](https://sheltered-hamlet-84127.herokuapp.com/) 
 
-Make sure to run seed if you run locally
+[![Tutorial video]](https://github.com/e-diaz27/ReduxHomework/blob/main/WORKS!.mp4)
+
 
 ## License
 
