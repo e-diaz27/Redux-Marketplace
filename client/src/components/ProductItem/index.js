@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { pluralize } from "../../utils/helpers"
-import { useStoreContext } from "../../utils/GlobalState";
+
+// Replace global context with react-redux methods
+import { useSelector, useDispatch } from 'react-redux';
+
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
+//selector to read data from initial state
+const selectCart = state => state.cart;
+
 function ProductItem(item) {
-  const [state, dispatch] = useStoreContext();
+
+  //useSelector and useDispatch hooks
+  const cart = useSelector(selectCart);
+  const dispatch = useDispatch();
 
   const {
     image,
@@ -15,8 +24,6 @@ function ProductItem(item) {
     price,
     quantity
   } = item;
-
-  const { cart } = state
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
