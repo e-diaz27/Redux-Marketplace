@@ -9,13 +9,11 @@ A fully functional e-commerce app mockup. Uses a MERN stack to uphold full stack
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contribute](#contribute)
-- [Tests](#tests)
 - [Contact](#contact)
 
 ## Installation
 
-To run locally input the following commands
+To run locally, input the following commands in terminal.
 
 ```
 npm run seed
@@ -31,15 +29,6 @@ Click the link! [Try it yourself!](https://sheltered-hamlet-84127.herokuapp.com/
 ## License
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-
-## Contribute
-
-
-
-## Tests
-```
-
-```
 
 ## Contact
 
