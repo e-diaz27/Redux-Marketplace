@@ -5,10 +5,8 @@ import { QUERY_CHECKOUT } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
-
 // Replace global context with react-redux methods
-import { useSelector, useDispatch } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
@@ -19,11 +17,12 @@ const selectCart = state => state.cart;
 const selectCartOpen = state => state.cartOpen;
 
 const Cart = () => {
-  //useSelector and useDispatch hooks
-  const cart = useSelector(selectCart);
-  const cartOpen = useSelector(selectCartOpen);
-  const dispatch = useDispatch();
 
+  // useSelector and use Dispatch hooks
+  const dispatch = useDispatch();
+  const cart =useSelector(selectCart);
+  const cartOpen =useSelector(selectCartOpen);
+  
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
   useEffect(() => {
