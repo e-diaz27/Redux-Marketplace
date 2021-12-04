@@ -21,7 +21,9 @@ npm run develop
 ```
 
 ## Usage
-Click the link! [Try it yourself!](https://sheltered-hamlet-84127.herokuapp.com/) 
+[Click me to view app!](https://sheltered-hamlet-84127.herokuapp.com/) 
+
+Click picture for video tutorial.
 
 [![Tutorial video](https://github.com/e-diaz27/ReduxHomework/blob/main/Screen.png)](https://drive.google.com/file/d/1D_TxwRysv_2BCaO456Cbp5mVmzAZFimZ/view?usp=sharing)
 
